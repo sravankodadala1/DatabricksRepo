@@ -12,7 +12,7 @@ class TestSite(unittest.TestCase):
 
     
     def setUpClass(cls):
-        cls.spark = SparkSession.builder.master("local[2]").appName("unittest").getOrCreate()
+        cls.spark = SparkSession.builder.appName("unittest").getOrCreate()
 
     def tearDownClass(cls):
         cls.spark.stop()
